@@ -1,0 +1,70 @@
+{
+	"title": "Test site",
+	"mainMenu": [
+		{
+			"menu_item": [
+				{
+					"menu_text": "Home",
+					"menu_page": "index",
+					"menu_link": "",
+					"menu_dropdown": false
+				}
+			]
+		},
+		{
+			"menu_item": [
+				{
+					"menu_text": "About",
+					"menu_page": "about",
+					"menu_link": "about.html",
+					"menu_dropdown": false
+				}
+			]
+		},
+		{
+			"menu_item": [
+				{
+					"menu_text": "Dropdown",
+					"menu_page": "dropdown",
+					"menu_link": "#",
+					"menu_dropdown": true,
+					"menu_item": [
+						{
+							"menu_text": "Dropdown-link1",
+							"menu_page": "dropdown",
+							"menu_link": "about.html",
+							"menu_dropdown": false
+						},
+						{
+							"menu_text": "Dropdown-link2",
+							"menu_page": "dropdown",
+							"menu_link": "about.html",
+							"menu_dropdown": true,
+							"menu_item": [
+								{
+									"menu_text": "Dropdown-link3",
+									"menu_page": "dropdown",
+									"menu_link": "about.html",
+									"menu_dropdown": false
+								}
+							]
+							
+						},
+						{
+							"menu_text": "Dropdown-link4",
+							"menu_page": "dropdown",
+							"menu_link": "dropdown4.html",
+							"menu_dropdown": false
+						}
+		
+					]
+				},
+				{
+					"menu_text": "Contact",
+					"menu_page": "about",
+					"menu_link": "about.html"
+				}
+			]
+		}
+	]
+}

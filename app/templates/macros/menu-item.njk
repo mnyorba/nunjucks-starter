@@ -1,0 +1,41 @@
+{% macro menuItem( menu_text, menu_page, menu_link, page_title) %}
+	<li class="nav-item nav-item-{{ menu_page }}{% if page_title == menu_page %} active {% endif %}">
+		<a class="nav-link" href="../{{ menu_link | lower | replace(" ", "") }}">{{ menu_text }} {% if page_title == menu_page %}<span class="sr-only">(current)</span>{% endif %}</a>
+	</li>
+{% endmacro %}
+
+{% macro menuItemDropdown( menu_text, menu_page, menu_link, page_title) %}
+	<a class="dropdown-item dropdown-item-{{ menu_page }} {% if page_title == menu_page %} active {% endif %}" href="../{{ menu_link | lower | replace(" ", "") }}">{{ menu_text }} {% if page_title == menu_page %}<span class="sr-only">(current)</span>{% endif %}</a>
+{% endmacro %}
+
+{% macro menuDropdown( menu, page_title ) %}
+	{% for items in menu %}
+		{% for item in items.menu_item %}
+			{% if not item.menu_dropdown %}
+				{{ menuItem(item.menu_text, item.menu_page, item.menu_link, page_title) }}
+			{% else %}
+				<li class="nav-item dropdown nav-item-{{ item.menu_page }}{% if page_title == item.menu_page %} active {% endif %}">
+					<a class="nav-link dropdown-toggle" href="{{ item.menu_link }}" id="navbarDropdownMenu{{ item.menu_page }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						{{ item.menu_text }}
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						{% for item in item.menu_item %}
+							{% if not item.menu_dropdown %}
+								{{ menuItemDropdown( item.menu_text, item.menu_page, item.menu_link, page_title ) }}
+							{% else %}
+								<a class="nav-link dropdown-toggle" href="{{ item.menu_link }}" id="navbarDropdownMenu{{ item.menu_page }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									{{ item.menu_text }}
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									{% for item in item.menu_item %}
+										{{ menuItemDropdown( item.menu_text, item.menu_page, item.menu_link, page_title ) }}
+									{% endfor %}
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</li>
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+{% endmacro %}
