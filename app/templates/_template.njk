@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document 3</title>
+</head>
+
+<body>
+	{% block main %}
+	<h1>hi hello</h1>
+		{% for card in cards %}
+		<div class="gallery__item">
+			<h2>{{card.title}}</h2>
+			<img src="{{card.image}}">
+		</div>
+		{% endfor %}
+	{% endblock %}
+</body>
+
+</html>

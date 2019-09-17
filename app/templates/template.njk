@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>{{ title }} Page Title</title>
+	<link rel="stylesheet" href="assets/bootstrap-4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/icofont/icofont.min.css">
+	<link rel="stylesheet" href="assets/nice-select/nice-select.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="d-flex flex-column h-100">
+	<header>
+		{% include "header/_header.njk" %}
+	</header>
+	<main role="main" class="site-wrapper overflow-hidden">
+		{% block main %}
+		{% endblock %}
+	</main>
+
+	<footer class="footer mt-auto bg-light">
+		{% block footer %}
+		{% endblock %}
+		{% include "footer/_footer.njk" %}
+	</footer>
+
+	<script src="assets/jquery/jquery.min.js"></script>
+	<script src="assets/jquery/jquery-migrate.min.js"></script>
+	<script src="assets/bootstrap-4/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/nice-select/jquery.nice-select.min.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+
+</html>
