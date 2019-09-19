@@ -16,7 +16,7 @@ Use this guide as a way to quickly start any new project.
 Download and unzip: https://github.com/mnyorba/nunjucks-starter/archive/master.zip   
 ### Install dependencies: 
 ```
-npm
+npm i
 ```
 ## Usage
 ```
