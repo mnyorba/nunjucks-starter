@@ -89,14 +89,14 @@ Compiled code for production can be found in the dist directory. (dist directory
 |   ├── js/
 |   └── img/
 |
-├── dist/
-|   ├── index.html
-|   ├── ...
-|   ├── about.html
-|   ├── assets/
-|   ├── css/
-|   ├── js/
-|   └── img/
+└── dist/
+    ├── index.html
+    ├── ...
+    ├── about.html
+    ├── assets/
+    ├── css/
+    ├── js/
+    └── img/
 ```
 ## List of packages used:
 #### for development theme:
