@@ -24,7 +24,7 @@ var gulp = require("gulp"),
     lineec = require('gulp-line-ending-corrector');
 
 
-const destination = (argv.clean) ? 'developed/demo/' : (argv.pub) ? 'developed/publish/' : 'developed/dev/';
+const destination = (argv.clean) ? 'demo/' : (argv.pub) ? 'dist/' : 'dev/';
 const port = (argv.demo) ? 4002 : (argv.pub) ? 4003 : 4001;
 
 var sourcemap = (argv.demo) ? false : (argv.pub) ? true : true;

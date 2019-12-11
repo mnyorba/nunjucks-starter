@@ -20,7 +20,8 @@
   ],
   "scripts": {
     "watch": "gulp buildWatch",
-    "build": "gulp build"
+    "build": "gulp build --pub",
+    "demo": "gulp build --clean"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
