@@ -22,7 +22,7 @@ npm i
 ```
 npm run watch
 ```
-This task will start a new server, open up a browser and watch for any SCSS, JS, PHP changes; once it compiles those changes, the browser will automatically reload page with injected the changes!
+This task copies all the files necessary for the project to the "dev" directory and will start a new server, open up a browser and watch for any SCSS, JS, PHP changes; once it compiles those changes, the browser will automatically reload page with injected the changes!
 
 ## Production
 ```
@@ -80,15 +80,23 @@ Compiled code for production can be found in the dist directory. (dist directory
 |           ├── ...
 |           └── macros(n).njk
 |
-└── developed/
-    └── dev/
-        ├── index.html
-        ├── ...
-        ├── about.html
-        ├── assets/
-        ├── css/
-        ├── js/
-        └── img/
+├── dev/
+|   ├── index.html
+|   ├── ...
+|   ├── about.html
+|   ├── assets/
+|   ├── css/
+|   ├── js/
+|   └── img/
+|
+├── dist/
+|   ├── index.html
+|   ├── ...
+|   ├── about.html
+|   ├── assets/
+|   ├── css/
+|   ├── js/
+|   └── img/
 ```
 ## List of packages used:
 #### for development theme:
